@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chelin Jebastin Raj - ERPNext & Frappe Developer Resume. View online or download PDF.">
+  <title>Chelin Jebastin Raj — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: light-dark(#f8fafc, #090d16);
+      --card-bg: light-dark(#ffffff, #111827);
+      --card-border: light-dark(#e2e8f0, #1f293d);
+      --text-main: light-dark(#0f172a, #f1f5f9);
+      --text-muted: light-dark(#475569, #94a3b8);
+      --text-sub: light-dark(#64748b, #64748b);
+      --primary: light-dark(#2563eb, #3b82f6);
+      --primary-hover: light-dark(#1d4ed8, #60a5fa);
+      --primary-light: light-dark(#eff6ff, #172554);
+      --badge-bg: light-dark(#f1f5f9, #1e293b);
+      --badge-text: light-dark(#334155, #cbd5e1);
+      --accent: light-dark(#0ea5e9, #38bdf8);
+      --shadow: light-dark(0 10px 25px -5px rgba(0,0,0,0.05), 0 10px 25px -5px rgba(0,0,0,0.4));
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 2rem 1rem 4rem;
+      min-height: 100vh;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Top Actions Toolbar */
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding: 1rem 1.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .view-toggles {
+      display: inline-flex;
+      background: var(--badge-bg);
+      padding: 4px;
+      border-radius: 10px;
+      gap: 4px;
+    }
+
+    .toggle-btn {
+      border: none;
+      background: transparent;
+      color: var(--text-muted);
+      padding: 8px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .toggle-btn.active {
+      background: var(--card-bg);
+      color: var(--primary);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1.1rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff !important;
+    }
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border-color: var(--card-border);
+    }
+    .btn-outline:hover {
+      background: var(--badge-bg);
+      border-color: var(--text-muted);
+    }
+
+    /* Resume Card */
+    .resume-paper {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* Header */
+    header.resume-header {
+      border-bottom: 2px solid var(--card-border);
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    h1.name {
+      font-size: 2.35rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .contacts {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.15s ease;
+    }
+    .contact-item:hover {
+      color: var(--primary);
+    }
+
+    /* Section Styling */
+    section.resume-section {
+      margin-bottom: 2.25rem;
+    }
+
+    h2.section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    h2.section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    p.summary-text {
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.7;
+    }
+
+    /* Bullets */
+    ul.bullet-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    ul.bullet-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    ul.bullet-list li::before {
+      content: "•";
+      position: absolute;
+      left: 0.4rem;
+      color: var(--primary);
+      font-weight: bold;
+      font-size: 1.2rem;
+      line-height: 1.3rem;
+    }
+
+    /* Badges / Chips */
+    .skill-category {
+      margin-bottom: 0.9rem;
+    }
+
+    .skill-cat-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .tag {
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Experience & Projects */
+    .job-card, .project-card {
+      margin-bottom: 1.75rem;
+      padding: 1.25rem;
+      border-radius: 12px;
+      background: var(--primary-light);
+      border: 1px solid var(--card-border);
+    }
+
+    .job-card:last-child, .project-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header, .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .job-role {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .job-company {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .job-date {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-sub);
+    }
+
+    .project-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 0.25rem;
+    }
+
+    .tech-stack-line {
+      font-size: 0.825rem;
+      color: var(--primary);
+      font-weight: 600;
+      margin-top: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* PDF Viewer Embed Container */
+    #pdf-view-container {
+      display: none;
+      width: 100%;
+      height: 90vh;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      box-shadow: var(--shadow);
+    }
+
+    #pdf-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Notification Toast */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: #10b981;
+      color: white;
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 999;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white !important;
+        color: black !important;
+      }
+      .toolbar, .toast, #pdf-view-container {
+        display: none !important;
+      }
+      #web-view-container {
+        display: block !important;
+      }
+      .resume-paper {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      .job-card, .project-card {
+        background: transparent !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .resume-paper {
+        padding: 1.5rem 1.25rem;
+      }
+      h1.name {
+        font-size: 1.85rem;
+      }
+      .contacts {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Top Actions Toolbar -->
+    <div class="toolbar">
+      <div class="view-toggles">
+        <button id="btn-toggle-web" class="toggle-btn active" onclick="switchView('web')">
+          <span>🌐</span> Interactive Web
+        </button>
+        <button id="btn-toggle-pdf" class="toggle-btn" onclick="switchView('pdf')">
+          <span>📄</span> PDF Preview
+        </button>
+      </div>
+
+      <div class="action-group">
+        <button class="btn btn-outline" onclick="copyContact('cjraj2002@gmail.com', 'Email copied!')" title="Copy Email">
+          📋 Copy Email
+        </button>
+        <button class="btn btn-outline" onclick="window.print()" title="Print or save as PDF">
+          🖨️ Print
+        </button>
+        <a href="Chelin_Jebastin_Raj_Frappe_ERPNXT.pdf" download="Chelin_Jebastin_Raj_Frappe_ERPNXT.pdf" class="btn btn-primary" id="download-btn">
+          ⬇️ Download PDF
+        </a>
+      </div>
+    </div>
+
+    <!-- PDF Viewer Frame -->
+    <div id="pdf-view-container">
+      <iframe id="pdf-iframe" src="Chelin_Jebastin_Raj_Frappe_ERPNXT.pdf#toolbar=1&navpanes=0"></iframe>
+    </div>
+
+    <!-- Interactive Web Resume -->
+    <main id="web-view-container" class="resume-paper">
+      <header class="resume-header">
+        <div class="header-top">
+          <div>
+            <h1 class="name">Chelin Jebastin Raj</h1>
+            <div class="title">ERPNext / Frappe Developer</div>
+          </div>
+        </div>
+
+        <div class="contacts">
+          <span class="contact-item">📍 Bengaluru, India</span>
+          <a href="mailto:cjraj2002@gmail.com" class="contact-item">✉️ cjraj2002@gmail.com</a>
+          <a href="tel:+918072988052" class="contact-item">📱 +91-8072988052</a>
+          <a href="https://linkedin.com/in/chelin-jebastin-raj" target="_blank" rel="noopener noreferrer" class="contact-item">🔗 linkedin.com/in/chelin-jebastin-raj</a>
+        </div>
+      </header>
+
+      <!-- Professional Summary -->
+      <section class="resume-section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary-text">
+          ERPNext / Frappe Developer with 2+ years of experience building and extending ERPNext for electronics refurbishment and manufacturing operations. Strong in Python and JavaScript on the Frappe framework: custom Doctypes, workflows, server and client scripts, background scheduler jobs, and large-scale automation engines for production planning, inventory sync, and order allocation. Experienced integrating ERPNext with external systems — Shopify (GraphQL / REST), a Django-based laptop testing and quality-inspection system (NJPulse), and warehouse barcode scanners — and comfortable running the production stack end to end: AWS EC2, Nginx, MariaDB performance tuning, and Linux administration. Works directly with business, warehouse, and manufacturing stakeholders to turn operational pain points into reliable, maintainable ERP solutions.
+        </p>
+      </section>
+
+      <!-- Core Competencies -->
+      <section class="resume-section">
+        <h2 class="section-title">ERPNext / Frappe Core Competencies</h2>
+        <ul class="bullet-list">
+          <li>Custom ERPNext modules, Doctypes, workflows, and field-level permissions tailored to manufacturing and business processes</li>
+          <li>Server Scripts, Client Scripts, and custom apps in Python and JavaScript for validation, conditional UI, and task automation</li>
+          <li>Frappe background scheduler jobs and queue-based batch processing — paginated, self-enqueueing, with Redis-backed distributed locking</li>
+          <li>Production planning, serial-level order allocation, BOM / part allocation, Material Requests, and Stock Movement controls</li>
+          <li>E-commerce and system integrations: Shopify GraphQL / API inventory and metafield sync, Django (NJPulse) ↔ ERPNext REST integration with caching</li>
+          <li>MariaDB performance tuning — slow-query profiling, index optimization, InnoDB lock-contention resolution</li>
+          <li>Production deployment and support: AWS EC2, Nginx reverse proxy, Linux server administration, log-based root-cause analysis</li>
+        </ul>
+      </section>
+
+      <!-- Technical Skills -->
+      <section class="resume-section">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skill-category">
+          <div class="skill-cat-title">ERP & Frameworks</div>
+          <div class="tags">
+            <span class="tag">Frappe Framework</span>
+            <span class="tag">ERPNext (Doctypes, Workflows, Server/Client Scripts)</span>
+            <span class="tag">Django 5</span>
+            <span class="tag">Django REST Framework (DRF)</span>
+            <span class="tag">Flask</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Languages</div>
+          <div class="tags">
+            <span class="tag">Python 3</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Bash / Shell</span>
+            <span class="tag">HTML5 & CSS3</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Databases & Caching</div>
+          <div class="tags">
+            <span class="tag">MariaDB</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis (Distributed Locks / Queues)</span>
+            <span class="tag">Query Tuning & Index Optimization</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Integrations, Hardware & Cloud</div>
+          <div class="tags">
+            <span class="tag">Shopify GraphQL API</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">PyDub / SpeechRecognition</span>
+            <span class="tag">AWS (EC2, S3, IAM)</span>
+            <span class="tag">Nginx</span>
+            <span class="tag">Gunicorn / Supervisor</span>
+            <span class="tag">Linux (Ubuntu) Sysadmin</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Professional Experience -->
+      <section class="resume-section">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">Software Engineer</div>
+              <div class="job-company">NewJaisa Technologies Ltd. — Bengaluru, India</div>
+            </div>
+            <div class="job-date">Apr 2024 – Present</div>
+          </div>
+          <ul class="bullet-list">
+            <li>Customized ERPNext modules — Doctypes, workflows, and field-level permissions — adapting out-of-the-box ERP for dynamic business logic.</li>
+            <li>Developed Python and JavaScript scripts for real-time field validation, conditional UI control, and automated task workflows.</li>
+            <li>Developed <strong>NJPulse</strong>, a Django-based laptop diagnostics and quality inspection platform, integrating it with ERPNext over REST for live serial, grade, and job card synchronization.</li>
+            <li>Built Frappe automation engines for production planning, serial order allocation, and Shopify inventory sync running as scheduled background workers.</li>
+            <li>Engineered scheduler-driven batch processes in Frappe with paginated chunks, self-enqueueing jobs, and Redis distributed locks.</li>
+            <li>Managed AWS EC2 production infrastructure end-to-end: provisioning, Nginx reverse proxy configuration, and MariaDB database maintenance.</li>
+            <li>Resolved recurring MariaDB performance bottlenecks (InnoDB lock contention, slow queries) through query profiling and targeted indexing.</li>
+            <li>Handled Linux server operations, log monitoring, and 99.9%+ uptime for core manufacturing operations.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Key Projects -->
+      <section class="resume-section">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="project-card">
+          <div class="project-name">1. Unified Production Planning & Intelligent Part Allocation Engine</div>
+          <ul class="bullet-list">
+            <li>Automated production scheduling orchestrating multi-stage remanufacturing across 10+ factory departments driven by transit SLAs and sales velocity.</li>
+            <li>Engineered 4-tier order-to-serial compatibility matching gates (CPU gen, architecture, screen types) to align daily builds with actual demand.</li>
+            <li>Automated BOM allocation for RAM/SSD permutations against warehouse inventory, generating automated nightly Material Requests.</li>
+            <li>Designed "Reconfig Rescue" identifying 30–60+ day WIP units to convert them into high-demand market SKUs.</li>
+          </ul>
+          <div class="tech-stack-line">Tech: Python, JavaScript, Frappe, ERPNext Manufacturing & Stock, MariaDB, Scheduler</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">2. Automatic Order Allocation & Fulfillment Engine</div>
+          <ul class="bullet-list">
+            <li>Built an allocation engine automatically assigning physical serialized machines to open customer orders across multiple warehouse facilities.</li>
+            <li>Optimized FIFO fulfillment queue prioritized by customer SLA, preventing unapproved B2B holds from freezing retail stock.</li>
+            <li>Built automated daily re-allocation daemon for at-risk orders with one-click manual re-allocation UI.</li>
+          </ul>
+          <div class="tech-stack-line">Tech: Python, ERPNext, MariaDB, Background Queues</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">3. Shopify ↔ ERPNext Sync Engine (Inventory, Delivery Dates & Metafields)</div>
+          <ul class="bullet-list">
+            <li>Engineered bi-directional inventory sync keeping online stock counts and delivery promises identical to real warehouse availability.</li>
+            <li>Audited and cleaned product catalog, fixing 1,436 ghost listings and correcting 353 inaccurate stock balances.</li>
+            <li>Handled Shopify GraphQL API rate limits with exponential backoff retry (up to 8 attempts) and chunked mutations (25 per call).</li>
+          </ul>
+          <div class="tech-stack-line">Tech: Python, Frappe / ERPNext, Shopify GraphQL API, Redis, Background Jobs</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-name">4. NJPulse — Laptop Diagnostics & Quality Inspection System (Django + ERPNext)</div>
+          <ul class="bullet-list">
+            <li>Full diagnostics platform digitizing bench testing, multi-stage quality inspections, and repair tracking with ERPNext REST sync.</li>
+            <li>Automated hardware suite: virtual keyboard testers (Standard, TKL, Chiclet, Gaming), display/touch tests, OpenCV webcam checks, and mic audio verification.</li>
+            <li>Async media pipeline saving bench testing video feeds directly to dedicated SFTP storage (Paramiko).</li>
+          </ul>
+          <div class="tech-stack-line">Tech: Python, Django 5, DRF, PostgreSQL, OpenCV, PyDub, Paramiko, ERPNext API</div>
+        </div>
+      </section>
+
+      <!-- Education & Certification -->
+      <section class="resume-section">
+        <h2 class="section-title">Education & Certifications</h2>
+        <div class="job-card">
+          <div class="job-header">
+            <div>
+              <div class="job-role">B.Tech – Electrical and Electronics Engineering</div>
+              <div class="job-company">University VOC College of Engineering, Anna University, Thoothukudi</div>
+            </div>
+            <div class="job-date">2019 – 2023</div>
+          </div>
+          <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text-muted);">
+            🎓 <strong>Certification:</strong> Python Full Stack Development — Pyspiders Institute (Certified)
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+
+  <script>
+    function switchView(mode) {
+      const webContainer = document.getElementById('web-view-container');
+      const pdfContainer = document.getElementById('pdf-view-container');
+      const btnWeb = document.getElementById('btn-toggle-web');
+      const btnPdf = document.getElementById('btn-toggle-pdf');
+
+      if (mode === 'pdf') {
+        webContainer.style.display = 'none';
+        pdfContainer.style.display = 'block';
+        btnPdf.classList.add('active');
+        btnWeb.classList.remove('active');
+      } else {
+        webContainer.style.display = 'block';
+        pdfContainer.style.display = 'none';
+        btnWeb.classList.add('active');
+        btnPdf.classList.remove('active');
+      }
+    }
+
+    function copyContact(text, msg) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(msg || 'Copied to clipboard!');
+      }).catch(() => {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        showToast(msg || 'Copied to clipboard!');
+      });
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+  </script>
+</body>
+</html>
